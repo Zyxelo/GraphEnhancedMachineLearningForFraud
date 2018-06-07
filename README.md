@@ -5,4 +5,7 @@ This repository contains the code used to evaluate whether or not features creat
 The thesis in its whole can be found here: TBA
 
 
-![Alt text](pictures/Graph-model-standard.png "Title")
+![Alt text](pictures/Graph-model-standard.png "Graph Model")
+
+
+![Alt text](pictures/Graph-model-pageerank.png "Unipartite Graph Representation")
