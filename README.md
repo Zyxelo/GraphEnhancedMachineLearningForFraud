@@ -5,4 +5,4 @@ This repository contains the code used to evaluate whether or not features creat
 The thesis in its whole can be found here: TBA
 
 
-
+![Alt text](pictures/Graph-model-standard.png "Title")
