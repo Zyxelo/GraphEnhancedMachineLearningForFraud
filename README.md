@@ -8,4 +8,4 @@ The thesis in its whole can be found here: TBA
 ![Alt text](pictures/Graph-model-standard.png "Graph Model")
 
 
-![Alt text](pictures/Graph-model-pageerank.png "Unipartite Graph Representation")
+![Alt text](pictures/Graph-community-pageerank.png "Unipartite Graph Representation")
