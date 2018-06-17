@@ -12,9 +12,11 @@ This project consists of two main parts
 
 ## Data 
 
+The simulated dataset used for testing the hypothesized model is simulated using BankSim, a financial fraud simulator developed by Lopez-Rojas (2016). The BankSim simulator produce a synthetic dataset with bank payment transactions, based on statistics and social network analysis of real data. It has been verified against the domain and validated statistically against the original source. The dataset is publicly available on Kaggle.com, which is a platform where statisticians and data miners can compete to produce the best predictive and descriptive models on datasets uploaded from corporations, academia, and regular users.
+
 ## Graph Model
 
-The simulated dataset used for testing the hypothesized model is simulated using BankSim, a financial fraud simulator developed by Lopez-Rojas (2016). The BankSim simulator produce a synthetic dataset with bank payment transactions, based on statistics and social network analysis of real data. It has been verified against the domain and validated statistically against the original source. The dataset is publicly available on Kaggle.com, which is a platform where statisticians and data miners can compete to produce the best predictive and descriptive models on datasets uploaded from corporations, academia, and regular users.
+
 
 A graph representation of the dataset is created to be able to run the graph algorithms, depicted in the figure below
 
@@ -70,4 +72,20 @@ WITH c1, b1, p1, p2, cnt
 CREATE (p1)-[:Payes {cnt: cnt}]->(p2)
 ~~~~
 
+Execute the following query to run the PageRank algorith on the placeholder enteties:
+~~~~
+CALL algo.pageRank('Placeholder', 'Payes', {writeProperty: 'pagerank'})
+~~~~
+Run this for community mining through label propagation: 
+~~~~
+CALL algo.labelPropagation('Placeholder', 'Payes', 'OUTGOING',
+ {write:true, partitionProperty: "community", weightProperty: "count"})
+~~~~
+And lastly, the following for degree:
+~~~~
+MATCH (p:Placeholder)
+SET p.degree = apoc.node.degree(p, 'Payes')
+~~~~
+
 ## Jupyter Notebook 
+Open the banksim.ipynb using jupyter notebook to see code for creating the supervised learning models
