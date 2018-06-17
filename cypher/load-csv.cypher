@@ -6,7 +6,6 @@ LOAD CSV WITH HEADERS FROM
 WITH line
 
 
-
 MERGE (custOrig:Customer {name: line.nameOrig})
 
 USING PERIODIC COMMIT 500
