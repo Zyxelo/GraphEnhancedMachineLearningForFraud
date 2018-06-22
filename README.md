@@ -59,7 +59,7 @@ CREATE (customer)-[:MAKE]->(transaction)
 
 As the graph algorithms need a unipartite graph model to be able to run, a unipartite representation was created as depicted below.
 
-![Alt text](pictures/Graph-community-pageerank.png "Unipartite Graph Representation")
+![Alt text](pictures/unipartite.svg "Unipartite Graph Representation")
 
 This was done by first running the following query
 ~~~~
