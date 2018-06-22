@@ -20,7 +20,7 @@ The simulated dataset used for testing the hypothesized model is simulated using
 
 A graph representation of the dataset is created to be able to run the graph algorithms, depicted in the figure below
 
-![Alt text](pictures/arrows.svg "Graph Model")
+![Alt text](pictures/graph.svg "Graph Model")
 
 
 
@@ -59,7 +59,7 @@ CREATE (customer)-[:MAKE]->(transaction)
 
 As the graph algorithms need a unipartite graph model to be able to run, a unipartite representation was created as depicted below.
 
-![Alt text](pictures/unipartite.svg "Unipartite Graph Representation")
+![Alt text](pictures/placeholder.svg "Unipartite Graph Representation")
 
 This was done by first running the following query
 ~~~~
