@@ -20,9 +20,17 @@ The simulated dataset used for testing the hypothesized model is simulated using
 
 A graph representation of the dataset is created to be able to run the graph algorithms, depicted in the figure below
 
-![Alt text](pictures/Graph-model-standard.png "Graph Model")
+![Alt text](pictures/arrows.svg "Graph Model")
 
-To create this representation using Neo4j, download the dataset from kaggle and 
+
+
+
+
+To create this representation using the Neo4j Desktop, create a new database and make sure to install the GraphAlgorithm and APOC packages. 
+
+When the packages has been installed, put a copy of the "bs140513_032310.csv" file in the database input folder by clicking "open folder" button in the Neo4j Desktop app. 
+
+When the database is up and running, use the Neo4j Browser to execute the following query to import the data into Neo4j.
 ~~~~
 CREATE CONSTRAINT ON (c:Customer) ASSERT c.id IS UNIQUE;
 CREATE CONSTRAINT ON (b:Bank) ASSERT b.id IS UNIQUE;
@@ -88,4 +96,5 @@ SET p.degree = apoc.node.degree(p, 'Payes')
 ~~~~
 
 ## Jupyter Notebook 
+Once the data has been modelled into a graph the data 
 Open the banksim.ipynb using jupyter notebook to see code for creating the supervised learning models
