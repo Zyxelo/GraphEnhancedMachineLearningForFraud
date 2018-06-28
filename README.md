@@ -6,7 +6,7 @@ This repository contains the code used to evaluate whether or not features creat
 ## Getting Started 
 This project consists of two main parts
 1. Building a graph model using Neo4j
-2. Creating supervised learning model  
+2. Creating supervised learning model and using features extracted for the graph to improve its accuracy  
 
 
 ## Data 
